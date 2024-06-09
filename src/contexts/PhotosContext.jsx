@@ -10,7 +10,7 @@ export default function PhotosProvider({ children }) {
     const getPhotos = async () => {
 
         try {
-            const response = await fetch("mod5-react2-context/photos.json");
+            const response = await fetch("photos.json");
             const { photos: photosdb } = await response.json();
             setPhotos(photosdb);
         } catch (error) {
